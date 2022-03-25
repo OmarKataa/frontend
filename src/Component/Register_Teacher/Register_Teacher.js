@@ -133,7 +133,7 @@ const Register_Teacher = () => {
       } else throw Error;
     } catch (error) {
       if (!error.response.data.success) {
-        return console.log(error);
+        return console.log(error.response);
       }
     }
   };
