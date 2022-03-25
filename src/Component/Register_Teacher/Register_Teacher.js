@@ -94,18 +94,15 @@ const Register_Teacher = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "https://omar-backend.herokuapp.com/teacher/new",
-        {
-          firstName,
-          lastName,
-          phone,
-          email,
-          password,
-          profileImage,
-          roleId: 2,
-        }
-      );
+      const res = await axios.post("/teacher/new", {
+        firstName,
+        lastName,
+        phone,
+        email,
+        password,
+        profileImage,
+        roleId: 2,
+      });
       if (res.data.success) {
         const Toast = Swal.mixin({
           toast: true,
