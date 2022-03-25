@@ -33,10 +33,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/login/", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "http://cors-anywhere.herokuapp.com/https://omar-backend.herokuapp.com/login/",
+        {
+          email,
+          password,
+        }
+      );
 
       if (res.data.success) {
         setEmail("");
@@ -79,7 +82,7 @@ const Login = () => {
       } else throw Error;
     } catch (error) {
       if (!error.response.data.success) {
-        return console.log(error.response);
+        return console.log(error);
       }
     }
   };
