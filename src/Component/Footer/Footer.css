@@ -1,0 +1,10 @@
+.FooterMainDiv {
+  background-color: #292726;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20%;
+  justify-content: center;
+}

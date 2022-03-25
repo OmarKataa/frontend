@@ -1,0 +1,11 @@
+.register_student-pageDiv {
+  min-height: 120vh;
+  height: 100%;
+}
+
+.register_student-mainDiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}

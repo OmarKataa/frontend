@@ -1,0 +1,15 @@
+.register_Teacher-pageDiv {
+  min-height: 120vh;
+  height: 100%;
+}
+
+.register_Teacher-mainDiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.TeacherRegisterForm {
+  font-size: 40px;
+}

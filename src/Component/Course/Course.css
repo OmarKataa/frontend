@@ -1,0 +1,107 @@
+.courseMainDiv {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.allCourses {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+}
+.cardCourse {
+  transition: 0.2s;
+  border-radius: 20px;
+}
+.imagCardCourse {
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.cardCourse:hover {
+  cursor: pointer;
+  background-color: #fddddd;
+}
+.paginationDiv {
+  width: 100%;
+  height: 100px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+a {
+  text-decoration: none;
+  font-style: none;
+}
+
+.paginationUl {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.filterDiv {
+  z-index: 1000;
+}
+
+.FilterAndSearch {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.form-control {
+}
+
+.input-group {
+  width: 70%;
+}
+.filterDiv {
+  width: 30%;
+}
+.form-control::placeholder {
+  font-size: 20px;
+  color: black;
+}
+
+.btn {
+  color: white;
+  /* background-color: #ec5c5c; */
+}
+option {
+  color: grey;
+  font-weight: normal !important;
+  font-size: 17px;
+}
+
+.hiddenOption {
+  color: grey;
+  font-weight: normal !important;
+  font-size: 17px;
+}
+
+@media (max-width: 620px) {
+  .FilterAndSearch {
+    flex-direction: column;
+  }
+  .filterDiv {
+    width: 100%;
+  }
+  .input-group {
+    width: 100%;
+  }
+}

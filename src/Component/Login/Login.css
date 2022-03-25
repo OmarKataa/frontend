@@ -1,0 +1,16 @@
+.loginMainDiv {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.formLoginDiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
