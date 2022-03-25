@@ -34,7 +34,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://cors-anywhere.herokuapp.com/https://omar-backend.herokuapp.com/login/",
+        "https://omar-backend.herokuapp.com/login/",
         {
           email,
           password,

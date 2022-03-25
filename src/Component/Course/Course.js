@@ -25,7 +25,7 @@ const Course = () => {
   const getAllCourses = async () => {
     try {
       const res = await axios.get(
-        "http://cors-anywhere.herokuapp.com/https://omar-backend.herokuapp.com/course/getall"
+        "https://omar-backend.herokuapp.com/course/getall"
       );
       if (res.data.success) {
         setAllCourses(res.data.result);
