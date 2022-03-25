@@ -47,12 +47,9 @@ const Course = () => {
     }
     setCategory(e.target.value);
     try {
-      const res = await axios.post(
-        "https://omar-backend.herokuapp.com/course/getByC",
-        {
-          Category: e.target.value,
-        }
-      );
+      const res = await axios.post("/course/getByC", {
+        Category: e.target.value,
+      });
       setAllCourses(res.data.result);
     } catch (err) {
       console.log(err);
