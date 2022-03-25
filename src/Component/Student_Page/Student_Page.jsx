@@ -20,7 +20,7 @@ const Student_Page = () => {
   useEffect(async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/student/getCourseById",
+        "https://omar-backend.herokuapp.com/student/getCourseById",
         {
           id: localStorage.getItem("userId"),
         }

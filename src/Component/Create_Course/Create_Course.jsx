@@ -92,22 +92,25 @@ const Create_Course = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`http://localhost:5000/course/new`, {
-        Title: title,
-        Description: descryption,
-        Price: price,
-        Language: language,
-        Schedule: schedual,
-        Author: author,
-        Requirements: requirements,
-        Category: category,
-        Video: video,
-        image,
-        teacher_Id: localStorage.getItem("userId"),
-        start,
-        roleId: 2,
-        room_Id: null,
-      });
+      const res = await axios.post(
+        `https://omar-backend.herokuapp.com/course/new`,
+        {
+          Title: title,
+          Description: descryption,
+          Price: price,
+          Language: language,
+          Schedule: schedual,
+          Author: author,
+          Requirements: requirements,
+          Category: category,
+          Video: video,
+          image,
+          teacher_Id: localStorage.getItem("userId"),
+          start,
+          roleId: 2,
+          room_Id: null,
+        }
+      );
 
       console.log(res);
       history("/Course");

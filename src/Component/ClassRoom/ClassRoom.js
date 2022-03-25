@@ -13,7 +13,7 @@ import { BiSend } from "react-icons/bi";
 import { AiOutlineArrowUp, AiFillCloseCircle } from "react-icons/ai";
 
 const peer = new Peer();
-let socket = io.connect("http://localhost:5000");
+let socket = io.connect("https://omar-backend.herokuapp.com");
 
 const ClassRoom = () => {
   const history = useNavigate();
@@ -44,7 +44,7 @@ const ClassRoom = () => {
         console.table(peer._socket._events.message.context._id);
         console.log(courseId);
         const res = await axios.put(
-          "http://localhost:5000/course/updateroomid",
+          "https://omar-backend.herokuapp.com/course/updateroomid",
           {
             room_Id:
               Object.values(peer)[2] ||
@@ -60,7 +60,7 @@ const ClassRoom = () => {
 
       if (login.roleId == 3) {
         const res1 = await axios.get(
-          `http://localhost:5000/course/getByid/${courseId}`
+          `https://omar-backend.herokuapp.com/course/getByid/${courseId}`
         );
 
         setRemotePeerId(res1.data.results[0].room_Id);
@@ -145,10 +145,7 @@ const ClassRoom = () => {
         <div class="row" style={{ width: "100%", height: "100%" }}>
           <div class="col-sm-8 mb-2 mt-2  ">
             <div class="card" style={{ height: "100%" }}>
-
-
               <div class="card-body p-0" style={{ height: "500px" }}>
-
                 {login.roleId === 2 ? (
                   <>
                     {console.log("inside")}

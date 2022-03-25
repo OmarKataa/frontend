@@ -4,7 +4,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../App";
 import { io } from "socket.io-client";
 //====================================================//Require
-let socket = io.connect("http://localhost:5000");
+let socket = io.connect("https://omar-backend.herokuapp.com");
 
 const Chat = ({ setRoomId, toggle }) => {
   //====================================================//Require

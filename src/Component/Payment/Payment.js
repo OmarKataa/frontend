@@ -21,10 +21,13 @@ const Payment = ({ Title, description, price }) => {
 
   const handleToken = async (token, addresses) => {
     try {
-      const response = await axios.post("http://localhost:5000/payment", {
-        token,
-        product,
-      });
+      const response = await axios.post(
+        "https://omar-backend.herokuapp.com/payment",
+        {
+          token,
+          product,
+        }
+      );
 
       console.log(response.status);
       if (response.status === 200) {
@@ -46,7 +49,7 @@ const Payment = ({ Title, description, price }) => {
         });
 
         const response = await axios.post(
-          "http://localhost:5000/payment/usercourse",
+          "https://omar-backend.herokuapp.com/payment/usercourse",
           {
             studentId: login.userId || localStorage.getItem("userId"),
             teacher_Id: teacherId,

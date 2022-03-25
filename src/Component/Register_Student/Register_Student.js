@@ -93,15 +93,18 @@ const Register_Student = () => {
   const submit_Handler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/student/new", {
-        firstName,
-        lastName,
-        phone,
-        email,
-        password,
-        profileImage,
-        roleId: 3,
-      });
+      const res = await axios.post(
+        "https://omar-backend.herokuapp.com/student/new",
+        {
+          firstName,
+          lastName,
+          phone,
+          email,
+          password,
+          profileImage,
+          roleId: 3,
+        }
+      );
       if (res.data.success) {
         const Toast = Swal.mixin({
           toast: true,

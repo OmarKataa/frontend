@@ -24,7 +24,9 @@ const Course = () => {
 
   const getAllCourses = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/course/getall");
+      const res = await axios.get(
+        "https://omar-backend.herokuapp.com/course/getall"
+      );
       if (res.data.success) {
         setAllCourses(res.data.result);
       } else throw Error;
@@ -45,9 +47,12 @@ const Course = () => {
     }
     setCategory(e.target.value);
     try {
-      const res = await axios.post("http://localhost:5000/course/getByC", {
-        Category: e.target.value,
-      });
+      const res = await axios.post(
+        "https://omar-backend.herokuapp.com/course/getByC",
+        {
+          Category: e.target.value,
+        }
+      );
       setAllCourses(res.data.result);
     } catch (err) {
       console.log(err);
@@ -60,10 +65,13 @@ const Course = () => {
     if (e.target.value) {
       console.log(e.target.value);
       try {
-        const res = await axios.post("http://localhost:5000/course/getByT", {
-          Title: e.target.value,
-          Category: category,
-        });
+        const res = await axios.post(
+          "https://omar-backend.herokuapp.com/course/getByT",
+          {
+            Title: e.target.value,
+            Category: category,
+          }
+        );
         console.log(res);
         setAllCourses(res.data.results);
       } catch (err) {
